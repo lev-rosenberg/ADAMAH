@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap");
+
 .body {
   padding: 1rem 1.5rem;
   height: 100vh;
 }
 
 .layout {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   height: 100%;
 }
 .header {
@@ -16,11 +18,16 @@
 }
 .nav {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .main {
-  display: flex;
+  /* display: flex; */
   flex-basis: 95%;
   height: 100%;
+}
+
+.logo {
+  font-family: "Rubik Distressed";
+  font-size: 2rem;
 }

@@ -29,19 +29,24 @@ a:hover {
 }
 
 .img-container {
-  padding: 0.5rem;
 }
 
 img {
   object-fit: cover;
-  height: 65vh;
+  width: inherit;
+  height: inherit;
 }
+
 h1 {
-  font-size: 2rem;
-  margin: 0;
+  font-size: 3rem;
+  font-weight: bolder;
 }
 h3 {
   font-size: 1rem;
   margin: 0;
   /* padding-bottom: 0.5rem; */
+}
+
+p {
+  margin: 0;
 }

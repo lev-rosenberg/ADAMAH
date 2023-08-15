@@ -5,9 +5,9 @@ export function Navbar() {
 
   return (
     <div className = {styles.header}>
-    <h1>
-      A D A M A H Ceramics
-    </h1>
+    <div className = {styles.logo}>
+    א ד מ ה
+    </div>
       <nav className={styles.nav}>
         <h3>Home</h3>
         <h3>About</h3>

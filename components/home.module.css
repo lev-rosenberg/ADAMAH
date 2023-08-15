@@ -1,0 +1,31 @@
+.home {
+  height: 100%;
+  /* padding-top: 10vh; */
+}
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3vh;
+}
+
+.carouselScroll {
+  display: flex;
+  overflow-x: scroll;
+  margin: auto;
+  gap: 0.5rem;
+  padding: -1.5rem;
+}
+/* Hiding scrollbar for Chrome, Safari and Opera */
+#content::-webkit-scrollbar {
+  display: none;
+}
+
+.clipCarousel {
+  clip-path: url(#curvedCarousel);
+}
+
+.homeImg {
+  width: 50vh;
+  height: 50vh;
+}
