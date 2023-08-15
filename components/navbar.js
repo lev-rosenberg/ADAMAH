@@ -4,7 +4,7 @@ import styles from './layout.module.css';
 export function Navbar() {
 
   return (
-    <div className = {styles.sidebar}>
+    <div className = {styles.header}>
     <h1>
       A D A M A H Ceramics
     </h1>

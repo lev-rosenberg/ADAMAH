@@ -7,32 +7,18 @@ import { useEffect, useRef, useState } from 'react'
 const name = 'Lev Rosenberg';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
-  const mainRef = useRef()
-  const [height, setHeight] = useState(0)
-
-  useEffect(() => {
-    getHeight()
-    window.addEventListener("resize", getHeight);
-    return () => window.removeEventListener("resize", getHeight);
-  }, [])
+export default function Layout({ children }) {
+ 
   
-  function getHeight() {
-    setHeight(mainRef.current.clientHeight)
-  }
-
-  useEffect(() => {
-    console.log(height)
-
-  }, [height])
 
   return (
-    <div ref = {mainRef} className={styles.body}>
+    <div className={styles.body}>
+      <div className={styles.layout}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="ADAMAH Portfolio"
+          content="Explore the functional art of ADAMAH"
         />
         <meta
           property="og:image"
@@ -42,11 +28,12 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+        </Head>
       <Navbar/>
       <main className = {styles.main} >
-        <div className = {styles.grid} style = {{maxHeight: `${height}px`}}>{children}</div>
+        {children}
       </main>
+      </div>
     </div>
   );
 }

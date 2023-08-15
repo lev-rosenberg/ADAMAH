@@ -1,17 +1,14 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
 import Image from '../components/image';
-import utilStyles from '../styles/utils.module.css';
+import CenterScroll from '../components/CenterScroll';
 import Link from 'next/link';
 
 
 export default function Home() {
   return (
     <Layout>
-        <Image src = '/images/flowing.png'/>
-        <Image src = '/images/flowing.png'/>
-        <Image src = '/images/flowing.png'/>
-        <Image src = '/images/flowing.png'/>
+      <CenterScroll />
     </Layout>
   );
 }
