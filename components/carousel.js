@@ -1,6 +1,6 @@
 
 import Image from "./image";
-import styles from "./home.module.css"
+import styles from "../styles/home.module.css"
 export default function Carousel() {
   return (
     <div className = {`${styles.clipCarousel} ${styles.carouselScroll}`}>

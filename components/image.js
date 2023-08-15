@@ -1,7 +1,7 @@
 
 const name = 'Lev Rosenberg';
 export const siteTitle = 'Next.js Sample Website';
-import styles from "./home.module.css"
+import styles from "../styles/home.module.css"
 
 export default function Image(props) {
   return (

@@ -1,8 +1,6 @@
 import Head from 'next/head';
-import styles from './layout.module.css';
+import styles from '../styles/layout.module.css';
 import { Navbar } from './navbar';
-import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react'
 
 const name = 'Lev Rosenberg';
 export const siteTitle = 'Next.js Sample Website';
