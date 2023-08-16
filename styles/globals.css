@@ -13,6 +13,7 @@ body {
   margin: 0;
   font-family: "Open Sans";
   font-size: 18px;
+  overscroll-behavior-x: contain;
 }
 
 * {
@@ -37,6 +38,7 @@ img {
 h1 {
   font-size: 3rem;
   font-weight: bolder;
+  margin-bottom: 10px;
 }
 h3 {
   font-size: 1rem;
@@ -45,5 +47,7 @@ h3 {
 }
 
 p {
-  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
