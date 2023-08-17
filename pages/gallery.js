@@ -15,13 +15,12 @@ export default function Gallery() {
     });
   };
 
-  retrieveImagePaths('../public/images');
-  // console.log(imagePaths[0])
+  retrieveImagePaths('../public/images/gallery');
   return (
     <Layout>
       <div className = {styles.grid}>
         {imagePaths.map((img,i) => (
-          <Image key = {i} src = {`images/${img}`}></Image>
+          <Image key = {i} src = {`images/${img}`} classStr = "gallery"></Image>
         ))}
       
       </div>
