@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout>
       <div className = {styles.home}>
-        <div className = {styles.titleContainer}>
+        <div className = "titleContainer">
           <h1>A D A M A H Ceramics</h1>
           <p>Functional Art</p>
         </div>

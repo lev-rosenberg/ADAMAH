@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from 'react'
 import Image from "./image";
 import styles from "../styles/home.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretRight, faCaretLeft } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Carousel() {
@@ -49,19 +49,19 @@ export default function Carousel() {
     <div className = {styles.carouselContainer}>
       <div className = {`${styles.clipCarousel} ${styles.carouselScroll}`} ref={containerRef}>
       <div className = {styles.scrollButtonsContainer}>
-        <div className = {`${styles.scrollButton} ${styles.scrollButtonLeft}`}>
-          <FontAwesomeIcon icon={faCaretLeft}  onClick = {scrollLeft}/>
-        </div>
-        <div className = {`${styles.scrollButton} ${styles.scrollButtonRight}`}>
-          <FontAwesomeIcon icon={faCaretRight}  onClick = {scrollRight}/>
-        </div>
+        <button className = {`${styles.scrollButton} ${styles.scrollButtonLeft}`} onClick = {scrollLeft}>
+          <FontAwesomeIcon icon={faAngleLeft}/>
+        </button>
+        <button className = {`${styles.scrollButton} ${styles.scrollButtonRight}`} onClick = {scrollRight}>
+          <FontAwesomeIcon icon={faAngleRight}  />
+        </button>
       </div>
         {imagePaths.map((img,i) => (
           <div ref = {cardRef} key = {i} >
             <Image src = {`images/home${img}`} classStr = "home"></Image>
           </div>
         ))}
-        <svg width = "0" height = "0">
+        <svg width = "100%" height = "100%">
           {/* this is taken from https://www.instagram.com/reel/Ch9UqIMDK7v/ great tutorial!! */}
           <defs>
             <clipPath id = "curvedCarousel" clipPathUnits="objectBoundingBox">
@@ -74,7 +74,18 @@ export default function Carousel() {
                 Z"
               />
             </clipPath>
+            <path 
+                d="M 0 0
+                Q .5 .2 1 0
+                L 1 1
+                Q .5 .8 0 1
+                L 0 0
+                Z"
+                stroke = "green"
+                strokeWidth = "10px"
+              />
           </defs>
+          
         </svg>
       </div>
     </div>
