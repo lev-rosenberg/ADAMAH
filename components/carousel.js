@@ -1,5 +1,5 @@
 
-import { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Image from "./image";
 import styles from "../styles/home.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,38 +10,47 @@ export default function Carousel() {
   const containerRef = useRef(null)
   const cardRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const imagePaths = [];
+  let imagePaths = [];
 
   const images = require.context('../public/images/home', true, /\.(jpg|jpeg|png|gif)$/);
   images.keys().forEach((path) => {
     imagePaths.push(path.substring(1));
   });
-
   useEffect(() => {
     const container = containerRef.current;
-    console.log(cardRef.current)
     const cardWidth = cardRef.current.offsetWidth;
-    const maxScroll = container.scrollWidth - container.clientWidth;
-    // const targetPosition = Math.min(currentIndex * cardWidth - container.clientWidth / 2 + cardWidth / 2, maxScroll);
-    const targetPosition = currentIndex * cardWidth;
 
-    console.log(targetPosition)
-    container.scrollTo({
+  }, [])
+
+
+  const scrollLeft = () => {
+    // if (currentIndex > 0) {
+    //   setCurrentIndex(currentIndex - 1);
+    // }
+    const container = containerRef.current;
+    const cardWidth = cardRef.current.offsetWidth;
+    const targetPosition = -1 * cardWidth;
+    container.scrollBy({
       left: targetPosition,
       behavior: 'smooth',
     });
-  }, [currentIndex]);
-
-  const scrollLeft = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    const last = imagePaths.pop()
+    imagePaths.unshift(last)
+    console.log(imagePaths)
   };
   
   const scrollRight = () => {
-    if (currentIndex < imagePaths.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
+    // if (currentIndex < imagePaths.length - 1) {
+    //   setCurrentIndex(currentIndex + 1);
+    // }
+    const container = containerRef.current;
+    const cardWidth = cardRef.current.offsetWidth;
+    const targetPosition = cardWidth;
+    container.scrollBy({
+      left: targetPosition,
+      behavior: 'smooth',
+    });
+
   };
 
 

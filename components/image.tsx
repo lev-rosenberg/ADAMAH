@@ -1,3 +1,4 @@
+import React from "react";
 const name = "Lev Rosenberg";
 export const siteTitle = "Next.js Sample Website";
 import styles from "../styles/image.module.css";

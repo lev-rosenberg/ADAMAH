@@ -10,18 +10,20 @@
   gap: 0.5rem;
 }
 .categoryButton {
-  border-radius: 15px;
   padding: 0.1rem 0.5rem;
-  /* font-size: 16px; */
+  font-size: 14px;
   line-height: 1.5;
-  margin: 15px;
-  width: 130px;
-  border: 0.5px solid gray;
-  background-color: none;
+  margin: 15px 5px;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
+  transition: 0.15s;
 }
 
 .categoryButton:hover {
-  background-color: #ddd;
-  border-color: #999;
+  color: gray;
+}
+
+.categoryButton:focus {
+  color: gray;
 }

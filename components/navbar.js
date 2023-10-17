@@ -15,9 +15,9 @@ export function Navbar() {
         <Link href = "/gallery">
           <h3>Gallery</h3>
         </Link>
-        <Link href = "/commission">
+        {/* <Link href = "/commission">
           <h3>Commission</h3>
-        </Link>
+        </Link> */}
         <Link href = "/about">
           <h3>About</h3>
         </Link>
