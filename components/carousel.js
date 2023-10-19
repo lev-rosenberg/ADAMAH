@@ -16,55 +16,59 @@ export default function Carousel() {
   images.keys().forEach((path) => {
     imagePaths.push(path.substring(1));
   });
+
   useEffect(() => {
-    const container = containerRef.current;
-    const cardWidth = cardRef.current.offsetWidth;
-
-  }, [])
-
+    console.log(currentIndex)
+  }, [currentIndex]);
 
   const scrollLeft = () => {
-    // if (currentIndex > 0) {
-    //   setCurrentIndex(currentIndex - 1);
-    // }
     const container = containerRef.current;
     const cardWidth = cardRef.current.offsetWidth;
-    const targetPosition = -1 * cardWidth;
+    let targetPosition
+    if (currentIndex > 1) {
+      setCurrentIndex(currentIndex - 1)
+      targetPosition = -1 * cardWidth;
+    }
+    else {
+      setCurrentIndex(imagePaths.length - 1)
+      targetPosition = (imagePaths.length - 1) * cardWidth;
+    }
     container.scrollBy({
       left: targetPosition,
       behavior: 'smooth',
     });
-    const last = imagePaths.pop()
-    imagePaths.unshift(last)
-    console.log(imagePaths)
   };
   
   const scrollRight = () => {
-    // if (currentIndex < imagePaths.length - 1) {
-    //   setCurrentIndex(currentIndex + 1);
-    // }
     const container = containerRef.current;
     const cardWidth = cardRef.current.offsetWidth;
-    const targetPosition = cardWidth;
+    let targetPosition;
+    if (currentIndex < imagePaths.length - 1) {
+      setCurrentIndex(currentIndex + 1)
+      targetPosition = cardWidth;
+    }
+    else {
+      setCurrentIndex(0)
+      targetPosition = -1 * (imagePaths.length - 1) * cardWidth;
+    }
     container.scrollBy({
       left: targetPosition,
       behavior: 'smooth',
     });
-
   };
 
 
   return (
     <div className = {styles.carouselContainer}>
       <div className = {`${styles.clipCarousel} ${styles.carouselScroll}`} ref={containerRef}>
-      <div className = {styles.scrollButtonsContainer}>
-        <button className = {`${styles.scrollButton} ${styles.scrollButtonLeft}`} onClick = {scrollLeft}>
-          <FontAwesomeIcon icon={faAngleLeft}/>
-        </button>
-        <button className = {`${styles.scrollButton} ${styles.scrollButtonRight}`} onClick = {scrollRight}>
-          <FontAwesomeIcon icon={faAngleRight}  />
-        </button>
-      </div>
+        <div className = {styles.scrollButtonsContainer}>
+          <button className = {`${styles.scrollButton} ${styles.scrollButtonLeft}`} onClick = {scrollLeft}>
+            <FontAwesomeIcon icon={faAngleLeft}/>
+          </button>
+          <button className = {`${styles.scrollButton} ${styles.scrollButtonRight}`} onClick = {scrollRight}>
+            <FontAwesomeIcon icon={faAngleRight}  />
+          </button>
+        </div>
         {imagePaths.map((img,i) => (
           <div ref = {cardRef} key = {i} >
             <Image src = {`images/home${img}`} classStr = "home"></Image>

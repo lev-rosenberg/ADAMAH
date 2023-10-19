@@ -15,17 +15,30 @@ export default function About() {
             </div>
             <div className = {styles.info}>
               <p>
-                Welcome to ADAMAH Ceramics, where the ancient art of pottery meets modern creativity. I'm Lev Rosenberg, the driving force behind this ceramic journey, and I'm thrilled to share my passion for ceramics with you. 
+                Welcome to ADAMAH Ceramics! I'm Lev Rosenberg, a student artist at Northwestern University. And I'm thrilled to share my passion for ceramics with you. 
               </p>
+              
               <p>
-                My connection to ceramics runs deep, inspired by my father who is a passionate hobbyist potter. The memories of watching him transform raw clay into exquisite pieces of art have been a guiding light in my creative exploration. 
-                For over a decade, ceramics has been more than just a hobby to me. It has been a life teacher. The phrase "it's just mud" is more than a reminder; it's a philosophy. Pottery teaches us to accept failure as a stepping stone and to keep moving forward. These lessons of resilience, patience, and adaptability have enriched both my personal life and my academic journey.
+                In the ceramic studio, you fail. A lot. Pieces break. Glazes don't turn out as expected. Sometimes you just don't like the way anything looks. 
+                And you get down on yourself. Everytime that happens, I think of a phrase my dad taught me about clay––"it's just mud".
+                You have to learn to accept the failures, the fuck ups––even when it's not your fault. Which by the way is fucking hard. It's nowhere near natural to me to just let go and move on.
+                But these lessons of resilience, patience, and adaptability have kept be afloat in the studio and beyond, enriching my personal life, my academic journey, and more.
               </p>
                 <p>
                 At ADAMAH Ceramics, I strive to create functional art that marries form and function. Each piece is a unique blend of sculptural creativity and practicality. Whether it's a chalice with a hand-formed stem or a teapot shaped from an unconventional donut-inspired form, my goal is to make art an integral part of your daily life.
               </p>
+              <h2> Contact Me</h2>
+
+              <p>If you want to commission a piece, or are just a fan of my work, please get in touch! </p>
+              
+              
+              <p>You can find me at: <a href="http://instagram.com/adamahceramics/">@adamahceramics</a>. Or just text me at 781-898-5553.</p>
+
+
+
             </div>
           </div>
+         
           
         </div>
       </main>

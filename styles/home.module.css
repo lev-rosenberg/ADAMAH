@@ -14,6 +14,7 @@
   overflow-y: clip;
   /* gap: 0.5rem; */
   margin: auto;
+  animation: carousel 20s linear infinite
 }
 
 .scrollButtonsContainer {
