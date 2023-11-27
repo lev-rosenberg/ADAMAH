@@ -3,11 +3,11 @@
 .body {
   padding: 1rem 1.5rem;
   /* height: 100vh; */
+  /* display: inline-block; */
 }
 
 .layout {
-  /* display: flex;
-  flex-direction: column; */
+
   height: 100%;
 }
 .header {
@@ -30,4 +30,37 @@
 .logo {
   font-family: "Rubik Distressed";
   font-size: 2rem;
+}
+
+.navmenu {
+  display: none
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    align-items: flex-start;
+    /* border: none; */
+  }
+  .logo {
+    display: none;
+  }
+
+  .body {
+    padding: 1rem 0.5rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.responsive {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .navmenu {
+    display: flex;
+  }
+
+  
 }

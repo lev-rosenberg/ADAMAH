@@ -59,9 +59,9 @@ export default function Carousel() {
 
 
   return (
-    <div className = {styles.carouselContainer}>
+    <div className = {styles.carouselContainer} >
       <div className = {`${styles.clipCarousel} ${styles.carouselScroll}`} ref={containerRef}>
-        <div className = {styles.scrollButtonsContainer}>
+        <div className = {styles.scrollButtonsContainer} >
           <button className = {`${styles.scrollButton} ${styles.scrollButtonLeft}`} onClick = {scrollLeft}>
             <FontAwesomeIcon icon={faAngleLeft}/>
           </button>
@@ -70,11 +70,11 @@ export default function Carousel() {
           </button>
         </div>
         {imagePaths.map((img,i) => (
-          <div ref = {cardRef} key = {i} >
+          <div className = {styles.imgContainer} ref = {cardRef} key = {i} style = {{display: "flex"}} >
             <Image src = {`images/home${img}`} classStr = "home"></Image>
           </div>
         ))}
-        <svg width = "100%" height = "100%">
+        <svg className = {styles.clip} width = "100%" height = "100%">
           {/* this is taken from https://www.instagram.com/reel/Ch9UqIMDK7v/ great tutorial!! */}
           <defs>
             <clipPath id = "curvedCarousel" clipPathUnits="objectBoundingBox">

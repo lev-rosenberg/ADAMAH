@@ -23,3 +23,21 @@
 .split {
   display: flex;
 }
+
+@media screen and (max-width: 768px) {
+  .split {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .profilePicture {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+  }
+  .info {
+    margin: 5%;
+  }
+}
