@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Layout from '../components/layout';
-import Image from '../components/image';
+import ImageWrapper from '../components/image';
 import styles from "../styles/gallery.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -71,14 +71,14 @@ export default function Gallery() {
             <>
               {Object.keys(collectionPaths).map((collection) => (
                 collectionPaths[collection].map((img, i) => (
-                  <Image key={i} src={`images/gallery/${img}`} classStr="gallery" />
+                  <ImageWrapper key={i} src={`images/gallery/${img}`} classStr="gallery" />
                 ))
               ))}
             </>
           ) : (
             <>
               {collectionPaths[selectedCollection].map((img, i) => (
-                <Image key={i} src={`images/gallery/${img}`} classStr="gallery" />
+                <ImageWrapper key={i} src={`images/gallery/${img}`} classStr="gallery" />
               ))}
             </>
           )}

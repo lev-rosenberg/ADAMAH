@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect, useState } from 'react'
-import Image from "./image";
+import ImageWrapper from "./image";
 import styles from "../styles/home.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
@@ -17,9 +17,6 @@ export default function Carousel() {
     imagePaths.push(path.substring(1));
   });
 
-  useEffect(() => {
-    console.log(currentIndex)
-  }, [currentIndex]);
 
   const scrollLeft = () => {
     const container = containerRef.current;
@@ -71,7 +68,7 @@ export default function Carousel() {
         </div>
         {imagePaths.map((img,i) => (
           <div className = {styles.imgContainer} ref = {cardRef} key = {i} style = {{display: "flex"}} >
-            <Image src = {`images/home${img}`} classStr = "home"></Image>
+            <ImageWrapper src = {`images/home${img}`} classStr = "home"></ImageWrapper>
           </div>
         ))}
         <svg className = {styles.clip} width = "100%" height = "100%">
