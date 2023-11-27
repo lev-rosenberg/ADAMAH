@@ -9,6 +9,15 @@
   display: flex;
   gap: 0.5rem;
 }
+
+.categoryToggle {
+  display: none;
+}
+
+.categorySelect {
+  display: none;
+}
+
 .categoryButton {
   padding: 0.1rem 0.5rem;
   font-size: 14px;
@@ -33,6 +42,30 @@
     gap: 1rem;
   }
   .categoryButtonsContainer {
-    display: block;
+    display: none;
+  }
+  .categoryButtonsContainer.responsive {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* align-items: flex-start; */
+    width: 85%;
+    position: relative;
+  }
+
+  .categoryButton {
+    margin: 5px 0;
+    padding: 0;
+  }
+
+  .categoryToggle {
+    display: flex;
+  }
+
+  .categorySelect {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin: 2rem 0 1rem 0;
   }
 }

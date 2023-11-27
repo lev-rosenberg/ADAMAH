@@ -23,7 +23,7 @@ export function Navbar() {
       </div>
       <div className = {styles.navmenu} id = "clickMenu" onClick = {toggleNav}>
           <FontAwesomeIcon icon={faBars} style={{ width: '1rem'}}/>
-        </div>
+      </div>
       <nav className={styles.nav} id = "navList">
         <Link href="/">
           <h3>Home</h3>
