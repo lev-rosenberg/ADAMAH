@@ -8,7 +8,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Gallery() {
 
-  const [selectedCollection, setSelectedCollection] = useState("Bowls")
+  const [selectedCollection, setSelectedCollection] = useState("All")
   
   const collectionPaths = {}
   const images = require.context('../public/images/gallery', true, /\.(jpg|jpeg|png|gif)$/);
