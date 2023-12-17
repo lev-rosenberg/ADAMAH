@@ -8,7 +8,7 @@ import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function Gallery() {
 
-  const [selectedCollection, setSelectedCollection] = useState("All")
+  const [selectedCollection, setSelectedCollection] = useState("Cups & Mugs")
   const [toggled, setToggled] = useState(false)
   const collectionPaths = {}
   const images = require.context('../public/images/gallery', true, /\.(jpg|jpeg|png|gif)$/);
@@ -75,14 +75,14 @@ export default function Gallery() {
             <>
               {Object.keys(collectionPaths).map((collection) => (
                 collectionPaths[collection].map((img, i) => (
-                  <ImageWrapper key={i} src={`images/gallery/${img}`} classStr="gallery" />
+                  <ImageWrapper key={i} src={`/images/gallery${img}`} classStr="gallery" />
                 ))
               ))}
             </>
           ) : (
             <>
               {collectionPaths[selectedCollection].map((img, i) => (
-                <ImageWrapper key={i} src={`images/gallery/${img}`} classStr="gallery" />
+                <ImageWrapper key={i} src={`/images/gallery${img}`} classStr="gallery" />
               ))}
             </>
           )}
