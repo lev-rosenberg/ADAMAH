@@ -16,6 +16,7 @@
   align-items: center;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #ebebeb;
+  min-height: 4vh;
 }
 .nav {
   display: flex;
@@ -50,12 +51,15 @@
   }
 
   .nav {
-    display: none;
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+    transform: translateX(-100vw);
+    transition: 500ms ease;
   }
 
   .nav.responsive {
-    display: flex;
-    gap: 0.5rem;
+    transform: translateX(0%);
   }
 
   .navmenu {

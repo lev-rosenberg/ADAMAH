@@ -41,16 +41,22 @@
   .grid {
     gap: 1rem;
   }
-  .categoryButtonsContainer {
-    display: none;
+
+  .categoryButtonsOuter {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
   }
-  .categoryButtonsContainer.responsive {
+  .categoryButtonsOuter.responsive {
+    grid-template-rows: 1fr;
+  }
+
+  .categoryButtonsContainer {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    /* align-items: flex-start; */
-    width: 85%;
+    gap: 5px;
     position: relative;
+    overflow: hidden;
   }
 
   .categoryButton {

@@ -3,13 +3,13 @@ import Layout from '../components/layout';
 import ImageWrapper from '../components/image';
 import styles from "../styles/gallery.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Gallery() {
 
   const [selectedCollection, setSelectedCollection] = useState("All")
-  
+  const [toggled, setToggled] = useState(false)
   const collectionPaths = {}
   const images = require.context('../public/images/gallery', true, /\.(jpg|jpeg|png|gif)$/);
   images.keys().forEach((path) => {
@@ -25,17 +25,19 @@ export default function Gallery() {
 
   function toggleCategories() {
     const categoryList = document.getElementById("categoryList");
-    if (categoryList.className === styles.categoryButtonsContainer) {
-      categoryList.className = styles.categoryButtonsContainer + " " + styles.responsive;
+    if (categoryList.className === styles.categoryButtonsOuter) {
+      categoryList.className = styles.categoryButtonsOuter + " " + styles.responsive;
     } else {
-      categoryList.className = styles.categoryButtonsContainer;
+      categoryList.className = styles.categoryButtonsOuter;
     }
+    setToggled(!toggled)
   }
 
   function untoggleCategories(collection) {
     setSelectedCollection(collection);
     const categoryList = document.getElementById("categoryList");
-    categoryList.className = styles.categoryButtonsContainer;
+    categoryList.className = styles.categoryButtonsOuter;
+    setToggled(!toggled)
   }
 
   return (
@@ -48,11 +50,11 @@ export default function Gallery() {
               {selectedCollection}
             </div>
             <div className = {styles.categoryToggle} id = "clickMenu" onClick = {toggleCategories}>
-              <FontAwesomeIcon icon={faBars} style={{ width: '1rem'}}/>
+              <FontAwesomeIcon icon={toggled ? faAngleUp : faAngleDown} style={{ width: '1rem'}}/>
             </div>
           </div>
-          
-          <div className = {styles.categoryButtonsContainer} id = "categoryList">
+          <div className = {styles.categoryButtonsOuter} id = "categoryList">
+          <div className = {styles.categoryButtonsContainer}>
             {categories.map((collection, i) => (
               <button 
                 key = {i} 
@@ -63,8 +65,10 @@ export default function Gallery() {
                 >
                   {collection}
               </button>
-            ))}
+            ))}            
           </div>
+          </div>
+         
         </div>
         <div className={styles.grid}>
           {selectedCollection === "All" ? (

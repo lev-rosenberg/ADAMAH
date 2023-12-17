@@ -41,6 +41,7 @@ export function Navbar() {
             <FontAwesomeIcon icon={faInstagram} style={{ width: '1rem'}}/>
           </a>
       </nav>
+      
     </div>
   )
 }
