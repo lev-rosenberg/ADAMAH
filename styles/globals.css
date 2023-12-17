@@ -30,6 +30,10 @@ a:hover {
   /* text-decoration: underline; */
 }
 
+a:active {
+  color: gray;
+}
+
 img {
   object-fit: cover;
   width: inherit;

@@ -39,8 +39,11 @@ export default function Carousel() {
   const scrollRight = () => {
     const container = containerRef.current;
     const cardWidth = cardRef.current.offsetWidth;
+    const excessCards = Math.floor(container.offsetWidth / cardWidth) - 1;
+    const indexAdjust = excessCards < 0 ? 0 : excessCards;
+    console.log(indexAdjust)
     let targetPosition;
-    if (currentIndex < imagePaths.length - 1) {
+    if (currentIndex < imagePaths.length - indexAdjust - 1) {
       setCurrentIndex(currentIndex + 1)
       targetPosition = cardWidth;
     }
@@ -59,12 +62,12 @@ export default function Carousel() {
     <div className = {styles.carouselContainer} >
       <div className = {`${styles.clipCarousel} ${styles.carouselScroll}`} ref={containerRef}>
         <div className = {styles.scrollButtonsContainer} >
-          <button className = {`${styles.scrollButton} ${styles.scrollButtonLeft}`} onClick = {scrollLeft}>
+          <div className = {`${styles.scrollButton} ${styles.scrollButtonLeft}`} onClick = {scrollLeft}>
             <FontAwesomeIcon icon={faAngleLeft}/>
-          </button>
-          <button className = {`${styles.scrollButton} ${styles.scrollButtonRight}`} onClick = {scrollRight}>
+          </div>
+          <div className = {`${styles.scrollButton} ${styles.scrollButtonRight}`} onClick = {scrollRight}>
             <FontAwesomeIcon icon={faAngleRight}  />
-          </button>
+          </div>
         </div>
         {imagePaths.map((img,i) => (
           <div className = {styles.imgContainer} ref = {cardRef} key = {i} style = {{display: "flex"}} >

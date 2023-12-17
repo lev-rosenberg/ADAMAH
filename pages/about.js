@@ -32,9 +32,7 @@ export default function About() {
               <p>If you want to commission a piece, or are just a fan of my work, please get in touch! </p>
               
               
-              <p>You can find me at: <a href="http://instagram.com/adamahceramics/">@adamahceramics</a>. Or just text me at 781-898-5553.</p>
-
-
+              <p>You can find me at: <a href="http://instagram.com/adamah_ceramics/" rel="noreferrer" target="_blank">@adamah_ceramics</a>. Or just text me at 781-898-5553.</p>
 
             </div>
           </div>

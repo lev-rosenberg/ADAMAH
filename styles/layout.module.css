@@ -55,7 +55,7 @@
     gap: 0.5rem;
     position: relative;
     transform: translateX(-100vw);
-    transition: 500ms ease;
+    transition: 300ms ease;
   }
 
   .nav.responsive {
