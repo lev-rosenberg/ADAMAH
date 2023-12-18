@@ -25,7 +25,7 @@ export default function Carousel() {
     console.log(excessCards)
     const indexAdjust = excessCards < 0 ? 0 : excessCards;
     let targetPosition
-    if (currentIndex > 1) {
+    if (currentIndex >= 1 + indexAdjust) {
       setCurrentIndex(currentIndex - 1)
       targetPosition = -1 * cardWidth;
     }
