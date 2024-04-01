@@ -1,6 +1,6 @@
 
 import React, { useRef, useState } from 'react'
-import ImageWrapper from "./image";
+import ImageWrapper from "./Image";
 import styles from "../styles/home.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';

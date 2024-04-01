@@ -1,4 +1,4 @@
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Carousel from '../components/Carousel';
 import styles from "../styles/home.module.css"
 

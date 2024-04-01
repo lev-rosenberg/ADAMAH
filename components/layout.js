@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/layout.module.css';
-import { Navbar } from './navbar';
+import { Navbar } from './Navbar';
 
 const name = 'Lev Rosenberg';
 export const siteTitle = 'Next.js Sample Website';

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Layout from '../components/layout';
-import ImageWrapper from '../components/image';
+import Layout from '../components/Layout';
+import ImageWrapper from '../components/Image';
 import styles from "../styles/gallery.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
