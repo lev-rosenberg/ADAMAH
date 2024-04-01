@@ -68,7 +68,7 @@ export default function Carousel() {
             <FontAwesomeIcon icon={faAngleLeft}/>
           </button>
           <button className = {`${styles.scrollButton} ${styles.scrollButtonRight}`} onClick = {scrollRight}>
-            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon icon={faAngleRight} />
           </button>
         </div>
         {imagePaths.map((img,i) => (
