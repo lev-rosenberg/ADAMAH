@@ -1,5 +1,5 @@
 import Layout from '../components/layout';
-import Carousel from '../components/carousel';
+import Carousel from '../components/Carousel';
 import styles from "../styles/home.module.css"
 
 

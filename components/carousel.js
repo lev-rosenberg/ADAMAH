@@ -1,5 +1,5 @@
 
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ImageWrapper from "./image";
 import styles from "../styles/home.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -22,7 +22,6 @@ export default function Carousel() {
     const container = containerRef.current;
     const cardWidth = cardRef.current.offsetWidth;
     const excessCards = Math.floor(container.offsetWidth / cardWidth) - 1;
-    console.log(excessCards)
     const indexAdjust = excessCards < 0 ? 0 : excessCards;
     let targetPosition
     if (currentIndex >= 1 + indexAdjust) {
@@ -37,7 +36,6 @@ export default function Carousel() {
       left: targetPosition,
       behavior: 'smooth',
     });
-    console.log(currentIndex, indexAdjust)
 
   };
   

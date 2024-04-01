@@ -3,7 +3,6 @@ import styles from "../styles/image.module.css";
 import Image from "next/image";
 
 export default function ImageWrapper({src, classStr}) {
-  console.log(src);
   return (
     <div className={styles[classStr]} style={{position: "relative"}}>
       <Image 
