@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import ImageWrapper from "./Image";
 import styles from "../styles/home.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faBars, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -68,7 +68,7 @@ export default function Carousel() {
             <FontAwesomeIcon icon={faAngleLeft}/>
           </button>
           <button className = {`${styles.scrollButton} ${styles.scrollButtonRight}`} onClick = {scrollRight}>
-            <FontAwesomeIcon icon={faAngleRight} />
+            <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
         {imagePaths.map((img,i) => (
